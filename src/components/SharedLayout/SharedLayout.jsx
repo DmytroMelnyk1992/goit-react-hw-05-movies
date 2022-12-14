@@ -6,16 +6,16 @@ export const SharedLayout = () => {
   return (
     <div>
       <header>
-        <nav>
-          <Link to="/" end>
-            Home
-          </Link>
+        <nav end="true">
+          <Link to="/">Home</Link>
           <Link to="/movies">Movies</Link>
         </nav>
       </header>
-      <Suspense fallback={<Loader />}>
-        <Outlet />
-      </Suspense>
+      <main>
+        <Suspense fallback={<Loader />}>
+          <Outlet />
+        </Suspense>
+      </main>
     </div>
   );
 };
