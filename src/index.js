@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import { App } from 'components/App';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // here we need to write a basename. If we forget to do this, our app doesn`t run neither localhost nore github livepage //
+
+  <BrowserRouter basename="/goit-react-hw-05-movies">
     <App />
-  </React.StrictMode>
+  </BrowserRouter>
 );
